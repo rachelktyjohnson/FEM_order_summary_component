@@ -1,7 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background: #e0e8ff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: repeat-x;
+  background-position: top center;
+}
+@media (min-width: 600px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+}
+
+main.card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin: 20px;
+  border-radius: 15px;
+  max-width: 310px;
+}
+@media (min-width: 600px) {
+  main.card {
+    max-width: 370px;
+  }
+}
+main.card .image-container {
+  width: 100%;
+}
+main.card .image-container img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+main.card .content {
+  padding: 25px;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  main.card .content {
+    padding: 35px;
+  }
+}
+main.card .content h1 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+main.card .content p {
+  font-size: 1rem;
+  color: #7280a7;
+  line-height: 1.6;
+}
+main.card .content .plan-container {
+  margin: 20px 0;
+  border-radius: 10px;
+  background: #f5f7ff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+main.card .content .plan-container img {
+  margin-right: 10px;
+}
+main.card .content .plan-container .plan-details {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+main.card .content .plan-container .plan-details span.plan {
+  font-weight: 900;
+  margin-bottom: 2px;
+}
+main.card .content .plan-container .plan-details span.cost {
+  color: #7280a7;
+}
+main.card .content .plan-container a.change {
+  margin-left: auto;
+  text-decoration: none;
+  color: #3829e0;
+  font-weight: 700;
+  transition: 0.2s color ease-in;
+}
+main.card .content .plan-container a.change:hover {
+  color: #8b82ed;
+}
+main.card .content button {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  border: 0;
+  font-size: 0.8rem;
+  background: #3829e0;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(56, 41, 224, 0.3);
+  cursor: pointer;
+  transition: 0.2s background ease-in;
+}
+main.card .content button:hover {
+  background: #8b82ed;
+  cursor: pointer;
+}
+main.card .content a.cancel {
+  font-weight: 700;
+  color: #7280a7;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s color ease-in;
+}
+main.card .content a.cancel:hover {
+  color: #31394e;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+}
+footer a {
+  color: #3e52a3;
 }
 
 /*# sourceMappingURL=styles.css.map */
